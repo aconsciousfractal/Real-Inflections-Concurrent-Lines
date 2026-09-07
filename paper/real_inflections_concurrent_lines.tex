@@ -1,0 +1,1094 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage{microtype}
+\usepackage[authoryear,round]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Real inflection points of perturbations of concurrent lines},pdfauthor={Oleksiy Babanskyy}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\RP}{\mathbb {RP}}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\Infl}{\operatorname{Infl}}
+\newcommand{\im}{\operatorname{Im}}
+\DeclareMathOperator{\ord}{ord}
+\title{Real inflection points of perturbations\\of concurrent lines}
+\author{Oleksiy Babanskyy}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let \(P\) be a real binary form of degree \(n\geq3\) with \(n\)
+distinct real projective roots, and let \(V\) be a real homogeneous
+form of degree \(n\), nonzero at the concurrent point.
+We give an exhaustive criterion for the real inflection points of
+\(P+\mu V=0\). If every real projective zero of the second polar
+\(V_{zz}\) on each limiting line is simple, then every sufficiently
+small nonzero real parameter gives a complex nonsingular curve whose
+ordinary real inflection points are in bijection with those zeros.
+A uniform estimate excludes real inflection points approaching the
+concurrent point. For every fixed \(P\), explicit choices of the polar
+realize all even totals from \(0\) to \(n(n-2)\) in even degree and
+all totals \(n,n+2,\ldots,n(n-2)\) in odd degree, within one
+rigid-isotopy class. In degree four we characterize all fourteen
+attainable cyclically labelled line-count vectors, and in even degree
+we determine the count on each oval. Radial profiles and the harmonic
+Stern family are applications. Two explicit quartics with the same
+second polar have six and eight ordinary real flexes, illustrating
+the role of simplicity. The complex specialization cycle is identified
+as an application of known divisor-specialization theory; the focus
+is the exhaustive real criterion and its explicit constructive use.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Real algebraic curves; inflection points;
+Hessian; deformations; rigid isotopy.
+
+\section{Introduction and main results}
+
+A real inflection point, or flex, of a nonsingular real projective
+plane curve is a real point at which the tangent has intersection
+multiplicity at least three. The flex is \emph{ordinary} when this
+multiplicity is exactly three. We count distinct real projective
+points. Nonsingularity below means nonsingularity over \(\C\).
+
+We study a concrete design problem: how can one determine and vary
+the real flex count of a perturbation of concurrent lines while
+keeping its topology under control? The maximal number \(n(n-2)\)
+allowed by Klein's bound and constructions attaining it are
+classical; see \citep[Theorem~1.1]{brugallelopez}. Moreover,
+Brugall\'e--L\'opez de Medrano already construct odd-degree
+maximally inflected curves with all their real flexes on a
+pseudoline \citep[Proposition~7.2]{brugallelopez}. Our question
+concerns a fixed line configuration and a specified perturbation,
+including counts below the maximum.
+
+Fix \(n\geq3\), coordinates \([x:y:z]\) on \(\CP^2\), and
+\(O=[0:0:1]\). Let
+\begin{equation}\label{eq:family}
+ P=\prod_{i=1}^n\ell_i\in\R[x,y]_n,\qquad
+ F_\mu=P+\mu V,\qquad C_\mu=\{F_\mu=0\},
+\end{equation}
+where the real linear factors \(\ell_i\) are pairwise nonproportional
+and \(V\in\R[x,y,z]_n\). Put
+\begin{equation}\label{eq:polar}
+ c=V(O),\qquad S=V_{zz},\qquad L_i=\{\ell_i=0\}.
+\end{equation}
+The derivative \(V_{zz}\) is the second polar with respect to \(O\)
+in these coordinates, up to a nonzero conventional constant.
+It is homogeneous of degree \(n-2\).
+
+\begin{theorem}[Real polar criterion]\label{thm:polar}
+Assume \(c\ne0\) and that every real projective zero of \(S|_{L_i}\)
+is simple, for each \(i\). Write
+\[
+ r_i=\#\{a\in L_i(\R):S(a)=0\}.
+\]
+For this fixed pair \(P,V\), there is \(\varepsilon(P,V)>0\) such
+that, for every real \(\mu\) with \(0<|\mu|<\varepsilon(P,V)\),
+the curve \(C_\mu\) is nonsingular and has exactly
+\begin{equation}\label{eq:realcount}
+                         N_{\R}(C_\mu)=\sum_{i=1}^n r_i
+\end{equation}
+real flexes, all ordinary. They are the unique continuations of the
+real points of \(P=S=0\). No real flexes approach \(O\).
+\end{theorem}
+
+The simplicity assumption concerns only real zeros; multiple nonreal
+zeros are permitted. Since \(S(O)=n(n-1)c\ne0\), none of the
+restrictions vanishes identically and none has a zero at \(O\).
+The statement includes points tending to \(z=0\), without requiring
+the flexes themselves to remain at infinity.
+
+\begin{theorem}[Explicit attainable totals]\label{thm:construction}
+For every fixed \(P\) as above, the set of totals attainable under
+the hypotheses of Theorem~\ref{thm:polar} is
+\begin{equation}\label{eq:spectrum}
+ \begin{cases}
+ \{0,2,4,\ldots,n(n-2)\},& n\ \text{even},\\
+ \{n,n+2,n+4,\ldots,n(n-2)\},& n\ \text{odd}.
+ \end{cases}
+\end{equation}
+Explicit perturbations realizing all these totals can be chosen with
+\(V(O)=1/[n(n-1)]\). For a sufficiently small common positive
+parameter, the resulting curves belong to one rigid-isotopy class.
+In odd degree they have one pseudoline and no ovals; in even degree
+they have \(n/2\) nonnested ovals.
+\end{theorem}
+
+Rigid isotopy here is a path of real degree-\(n\) projective forms
+whose complex zero curves are nonsingular. Flexes may become
+nonordinary along such a path. Theorem~\ref{thm:construction}
+describes the transverse small-perturbation regime of
+\eqref{eq:family}; in particular its odd-degree lower endpoint
+does not assert a minimum for the entire rigid-isotopy class.
+The construction realizes all totals, not arbitrary independent
+choices of the vector \((r_1,\ldots,r_n)\). Proposition~\ref{prop:quarticvectors}
+classifies these vectors in degree four, and Corollary~\ref{cor:ovalcount}
+assigns the flexes to the individual ovals in even degree.
+
+The global existence of all admissible real flex totals is classical:
+Ronga's Theorem~II gives every even total from zero and every odd
+total from three up to the Klein bound \citep[Theorem~II, p.~197]{ronga}.
+Our construction imposes additional constraints: the concurrent line
+configuration is prescribed, the perturbations are given explicitly,
+and the resulting curves can be chosen in one rigid-isotopy class.
+Thus the odd lower endpoint in our family describes its transverse
+small-parameter regime, not the global spectrum.
+
+Changes of two real flexes through a contact of order four in generic
+families of nonsingular real curves are classical; see
+\citep[Section~3.1]{arroyoetal}. Our purpose is to determine the entire
+small-parameter real flex locus for a specified perturbation of a
+fixed concurrent line configuration, and to construct explicit
+profiles realizing the totals in \eqref{eq:spectrum}.
+
+Several ingredients have explicit antecedents. The strict sign of
+the binary Hessian is classical \citep{causare}. Second derivatives
+of the deformation occur in the determinant in
+\citep[Example~5.3]{esteves}, although that example does not directly
+apply to our concurrent configuration. Here the leading residual
+Hessian is computed directly as \(B_PV_{zz}\). The complex cycle in
+Appendix~\ref{app:cycle} follows from
+\citep[Theorem~4.1]{esteves} or \citep[Proposition~5.2]{ems}.
+The implicit function theorem, coefficient integration and compactness
+complete the argument once the uniform real exclusion estimate is proved.
+
+Local theories of inflections under deformation provide complementary
+perspectives. Garay develops equivalence and versality with respect
+to inflections \citep[Sections~3.2--3.6]{garay}.
+Bruce, Fernandes and Tari study local inflection invariants; their
+finiteness criterion excludes germs containing a line
+\citep[Theorem~3.3(7) in the arXiv version]{bruceetal}.
+Our limiting curve is a union of straight lines. We divide the
+family Hessian by the parameter and use its residual equation,
+together with a uniform real estimate at the concurrent point.
+The contribution is the exhaustive real criterion for fixed \(P,V\)
+and its explicit constructive use.
+
+\section{The real polar criterion}
+
+\subsection{A nonsingular rescaled model}
+
+\begin{lemma}\label{lem:smooth}
+If \(P\) has distinct projective roots and \(V(O)=c\ne0\), then
+\(C_\mu\) is nonsingular for every sufficiently small nonzero
+complex \(\mu\). No polar-simplicity assumption is needed.
+\end{lemma}
+
+\begin{proof}
+Write
+\[
+ V=\sum_{j=0}^n V_j(x,y)z^{n-j},\qquad V_0=c,
+\]
+with \(V_j\) binary homogeneous of degree \(j\).
+For \(\mu=u^n\ne0\), make the projective coordinate change
+\([x:y:z]=[uX:uY:Z]\) and divide the equation by \(u^n\).
+The transformed form is
+\[
+ G_u=P(X,Y)+\sum_{j=0}^n u^jV_j(X,Y)Z^{n-j},
+ \qquad G_0=P(X,Y)+cZ^n.
+\]
+A singular point of \(G_0=0\) would have \(Z=0\) and
+\(P_X=P_Y=0\). Euler's identity would then give a multiple
+projective root of \(P\), a contradiction. The nonsingular locus
+in the coefficient space is open, so \(G_u=0\) stays nonsingular
+for \(|u|\) small. Every small nonzero complex \(\mu\) has such
+an \(n\)-th root.
+
+For real \(\mu=\sigma u^n\), with \(u>0\) and
+\(\sigma\in\{1,-1\}\), the same real coordinate change gives instead
+\begin{equation}\label{eq:realmodel}
+ G_{\sigma,u}
+ =P(X,Y)+\sigma\sum_{j=0}^n u^jV_j(X,Y)Z^{n-j},
+ \qquad G_{\sigma,0}=P(X,Y)+\sigma cZ^n.
+\end{equation}
+Both real signs therefore have nonsingular real limiting models.
+\end{proof}
+
+The model \(P+cZ^n=0\) also appears in the complex inflection count of
+\citet[proof of Theorem~6.8, author-hosted version]{breidingkohnsturmfels}.
+For a prescribed perturbation \(V\), the exhaustive real count below
+additionally uses the uniform exclusion estimate at the concurrent point.
+
+\subsection{The Hessian calculation}
+
+Set \(B_P=P_{xx}P_{yy}-P_{xy}^2\). The ternary Hessian
+\(\mathcal H_\mu=\det\Hess_{x,y,z}F_\mu\) satisfies the exact identity
+\begin{equation}\label{eq:hessian}
+ \mathcal H_\mu
+   =\mu B_PS+\mu^2M+\mu^3\det\Hess V,
+\end{equation}
+where
+\begin{equation}\label{eq:M}
+\begin{split}
+ M={}&(P_{xx}V_{yy}+P_{yy}V_{xx}-2P_{xy}V_{xy})V_{zz}\\
+     &-P_{xx}V_{yz}^2-P_{yy}V_{xz}^2+2P_{xy}V_{xz}V_{yz}.
+\end{split}
+\end{equation}
+Indeed, the \(z\)-row and \(z\)-column of \(\Hess P\) vanish;
+expanding the determinant by powers of \(\mu\) gives
+\eqref{eq:hessian}--\eqref{eq:M}. Thus
+\begin{equation}\label{eq:normalized}
+ K_\mu=\mathcal H_\mu/\mu
+       =B_PS+\mu M+\mu^2\det\Hess V
+\end{equation}
+extends polynomially to \(\mu=0\), with \(K_0=B_PS\).
+For \(\mu\ne0\), the zeros of \(K_\mu\) on \(C_\mu\) are its flexes.
+
+For completeness, the local relation to contact multiplicity is
+especially simple. In an affine chart, let the curve be \(y=h(x)\)
+with \(F_y\ne0\), where \(F\) denotes the dehomogenized degree-\(n\)
+form. Euler's identities and implicit differentiation give, on the curve,
+\begin{equation}\label{eq:contact}
+ \det\Hess(F^{\mathrm{hom}})
+        =(n-1)^2F_y^3h''.
+\end{equation}
+Here the Hessian is dehomogenized in the same chart.
+The factor multiplying \(h''\) is a unit. A tangent contact of order
+\(k\) therefore contributes Hessian intersection multiplicity
+\(k-2\), and a transverse Hessian intersection is an ordinary flex.
+
+\subsection{Uniform exclusion at the concurrent point}
+
+We include a proof of the classical binary-Hessian sign to keep the
+normalization and strictness explicit; compare
+\citep[Proposition~1 and proof of Theorem~1]{causare}.
+
+\begin{lemma}\label{lem:binary}
+For the completely real squarefree binary form \(P\),
+\(B_P(v)<0\) for every \(v\in\R^2\setminus\{0\}\).
+In particular, \(B_P\leq-\eta\) on the unit circle for some \(\eta>0\).
+\end{lemma}
+
+\begin{proof}
+Choose real linear coordinates putting the point in the chart \(x=1\)
+and all roots in that chart, and write
+\(f(t)=P(1,t)=a\prod_i(t-a_i)\) with distinct real \(a_i\).
+Away from the roots,
+\begin{equation}\label{eq:binary}
+\begin{split}
+ B_P(1,t)&=(n-1)\bigl(nff''-(n-1)(f')^2\bigr)\\
+ & =-(n-1)f(t)^2\sum_{i<j}
+       \left(\frac1{t-a_i}-\frac1{t-a_j}\right)^2<0.
+\end{split}
+\end{equation}
+At a root the first expression equals
+\(-(n-1)^2f'(t)^2<0\). A real invertible linear coordinate change
+multiplies the Hessian determinant by the positive square of its
+determinant. Rescaling a nonzero vector also preserves the sign,
+since \(B_P\) has even degree \(2n-4\). This proves the assertion
+in every direction; compactness gives \(\eta\).
+\end{proof}
+
+Work near \(O\) in \(z=1\), and write \((x,y)=\rho v\) with
+\(\rho>0\) and \(v\in S^1\). Since \(V(\rho v,1)\) tends uniformly
+to \(c\ne0\), points of the real curve near \(O\) satisfy
+\begin{equation}\label{eq:muscale}
+ |\mu|=\left|\frac{P(\rho v)}{V(\rho v,1)}\right|
+                 \leq C\rho^n.
+\end{equation}
+Uniformly in \(v\), we have
+\[
+ B_P(\rho v)=\rho^{2n-4}B_P(v),\qquad
+ S(\rho v,1)=n(n-1)c+O(\rho),\qquad
+ M(\rho v,1)=O(\rho^{n-2}).
+\]
+The second derivatives of \(V\) are bounded in this neighborhood.
+Combining these estimates with \eqref{eq:normalized} and
+\eqref{eq:muscale}, \emph{on the curve}, gives
+\begin{equation}\label{eq:central}
+ \frac{K_\mu(\rho v,1)}{\rho^{2n-4}}
+ =n(n-1)cB_P(v)+O(\rho)+O(\rho^2)+O(\rho^4).
+\end{equation}
+The leading term is uniformly separated from zero by
+Lemma~\ref{lem:binary}. A fixed sufficiently small real neighborhood
+of \(O\) therefore contains no flexes of any small nonzero-parameter
+curve. Also \(O\notin C_\mu\), since \(F_\mu(O)=\mu c\).
+The estimate is uniform over all approach directions and uses no
+assumption on the relative rates at which \(\mu\) and \(\rho\) vanish.
+
+\subsection{Continuation and exhaustion}
+
+Let \(a\) be a real point of \(P=S=0\). It is not \(O\) and belongs
+to precisely one \(L_i\). The differential of \(P\) is nonzero
+there. Moreover \(B_P(a)\ne0\), and the real simplicity of
+\(S|_{L_i}\) makes \(P=K_0=0\) a transverse intersection.
+The real analytic implicit function theorem applied in a projective
+chart to \(F_\mu=K_\mu=0\) gives exactly one nearby real solution
+for every sufficiently small \(\mu\). Its transverse intersection
+persists; \eqref{eq:contact} makes the flex ordinary.
+This also treats points on \(z=0\).
+
+To exclude other real flexes, suppose that such points occur for a
+sequence of nonzero real parameters tending to zero. Compactness
+of \(\RP^2\) gives a convergent subsequence. Its limit lies on
+\(P=0\), and \eqref{eq:central} excludes \(O\). At any other real
+point, \(K_0=B_PS\) and \(B_P\ne0\), so the limit must be a real
+zero of \(S|_{L_i}\). The local uniqueness just proved is a
+contradiction. Together with Lemma~\ref{lem:smooth}, this proves
+Theorem~\ref{thm:polar}.
+
+\section{Constructing all attainable totals}\label{sec:construction}
+
+Write \(d=n-2=2a+\epsilon\) with \(\epsilon\in\{0,1\}\).
+For each \(i\), the restriction \(S|_{L_i}\) has projective degree
+\(d\). Nonreal roots come in conjugate pairs, counted with
+multiplicity, whereas its real roots are simple. Consequently
+\[
+ r_i\equiv d\pmod2,\qquad \epsilon\leq r_i\leq d.
+\]
+Theorem~\ref{thm:polar} gives the containment in
+\eqref{eq:spectrum}. We now realize every total in that set for
+the specified \(P\).
+
+Choose unit vectors \(v_i\) on the \(n\) distinct line directions.
+There is a real linear form \(\lambda\) such that
+\[
+ \lambda_i=\lambda(v_i)^2>0
+ \quad\hbox{are pairwise distinct}.
+\]
+Indeed, it suffices to avoid the finitely many proper linear
+conditions
+\(\lambda(v_i)=0\), \(\lambda(v_i-v_j)=0\), and
+\(\lambda(v_i+v_j)=0\) in the two-dimensional dual space.
+The latter vectors are nonzero because the directions are distinct.
+
+Choose pairwise distinct real numbers \(t_1,\ldots,t_a\), none equal
+to a \(\lambda_i\), and define
+\begin{equation}\label{eq:constructS}
+ S=z^\epsilon\prod_{j=1}^{a}
+       \bigl(z^2+t_j(x^2+y^2)-\lambda(x,y)^2\bigr).
+\end{equation}
+On \(L_i\), with coordinates \([x:y:z]=[\rho v_i:z]\), each
+factor is \(z^2+(t_j-\lambda_i)\rho^2\). It gives two simple real
+roots when \(t_j<\lambda_i\), and none when \(t_j>\lambda_i\).
+The factor \(z^\epsilon\) adds \(\epsilon\) simple roots.
+Roots belonging to different factors cannot coincide because the
+\(t_j\) are distinct. Also \(S(O)=1\).
+
+For one \(t_j\), the number \(b_j=\#\{i:\lambda_i>t_j\}\) can be
+any integer from \(0\) to \(n\). Thus
+\begin{equation}\label{eq:sumcounts}
+                    \sum_i r_i=\epsilon n+2\sum_{j=1}^{a}b_j.
+\end{equation}
+Every \(K\in\{0,\ldots,an\}\) is a sum of \(a\) integers in
+\(\{0,\ldots,n\}\): write \(K=qn+r\), use \(q\) copies of \(n\),
+the nonzero remainder if present, and zeros. When \(q=a\), the
+remainder is zero. Repeated values of \(b_j\) are realized by
+distinct \(t_j\) in the same open interval. Formula
+\eqref{eq:sumcounts} therefore gives every desired total.
+For \(n=3\) the product is empty, \(S=z\), and the same argument
+gives the sole total \(3\).
+
+There is no extension or interpolation problem for these restrictions:
+we have constructed a single homogeneous \(S\). If
+\(S=\sum_{j=0}^{n-2}s_j(x,y)z^{n-2-j}\), set
+\begin{equation}\label{eq:integrate}
+ V=\sum_{j=0}^{n-2}
+       \frac{s_j(x,y)z^{n-j}}{(n-j)(n-j-1)}.
+\end{equation}
+Then \(V_{zz}=S\) and \(V(O)=1/[n(n-1)]\).
+Terms \(A_{n-1}(x,y)z+B_n(x,y)\) may be added without changing
+the limiting criterion. The topology and common-parameter assertions
+of Theorem~\ref{thm:construction} follow from the next section.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Degree & Radial totals & Totals from \eqref{eq:constructS}\\
+\midrule
+4 & \(0,8\) & \(0,2,4,6,8\)\\
+5 & \(5,15\) & \(5,7,9,11,13,15\)\\
+6 & \(0,12,24\) & \(0,2,4,\ldots,24\)\\
+\bottomrule
+\end{tabular}
+\caption{Attainable totals in the respective transverse
+small-parameter regimes for each fixed line configuration.
+The radial column follows from Corollary~\ref{cor:radial}.}
+\label{tab:counts}
+\end{table}
+
+\begin{proposition}[Quartic line-count vectors]\label{prop:quarticvectors}
+Fix four distinct concurrent real lines, labelled in cyclic order
+in \(\RP^1\). Among perturbations satisfying
+Theorem~\ref{thm:polar}, the attainable vectors
+\((r_1,r_2,r_3,r_4)\) are exactly the fourteen members of
+\(\{0,2\}^4\) other than
+\[
+                         (2,0,2,0),\qquad(0,2,0,2).
+\]
+Each can be realized with \(V(O)=1/12\). The labels are retained:
+no quotient by cyclic rotation or permutation is taken.
+\end{proposition}
+
+\begin{proof}
+Write a general second polar as
+\[
+ S=az^2+zL(x,y)+Q(x,y),\qquad
+ \Delta_S=L^2-4aQ,\qquad a=12V(O)\ne0,
+\]
+where \(L,Q\) have degrees one and two. For a representative \(v_i\)
+of the direction of \(L_i\), the restricted form in coordinates
+\([\rho:z]\) is
+\(az^2+\rho L(v_i)z+\rho^2Q(v_i)\).
+It is nonzero at \(\rho=0\). Simplicity of its real zeros
+is equivalent to \(\Delta_S(v_i)\ne0\), and \(r_i=2\)
+or \(0\) according as this value is positive or negative.
+
+A nonzero binary quadratic has at most two distinct zeros in
+\(\RP^1\). Thus its signs at four cyclic directions cannot
+alternate, since alternation would require a zero in each of
+four intervening intervals. Conversely, every nonalternating
+sign pattern has zero or two cyclic sign changes. A definite
+quadratic realizes either constant pattern. For two sign changes,
+choose one zero direction in each of the two corresponding open
+intervals and take the product of linear forms vanishing there,
+with the appropriate overall sign. This realizes the pattern
+with nonzero values at all four given directions.
+
+For any such quadratic \(\Delta_S\), set
+\[
+                S=z^2-\frac{\Delta_S}{4},\qquad
+                V=\frac{z^4}{12}-\frac{\Delta_S z^2}{8}.
+\]
+Then \(V_{zz}=S\), \(V(O)=1/12\), and the discriminant of
+the restriction is precisely \(\Delta_S(v_i)\).
+Theorem~\ref{thm:polar} proves sufficiency for every fixed \(P\).
+\end{proof}
+
+\section{Topology and rigid isotopy}\label{sec:topology}
+
+\begin{proposition}\label{prop:topology}
+Fix \(P\), \(c\ne0\), and \(\sigma\in\{1,-1\}\).
+For every fixed \(V\) with \(V(O)=c\), the curves
+\(P+\mu V=0\), for sufficiently small real \(\mu\) of sign
+\(\sigma\), are rigidly isotopic to
+\begin{equation}\label{eq:modelcurve}
+                         P(X,Y)+\sigma cZ^n=0.
+\end{equation}
+In odd degree their real locus is one pseudoline; in even degree
+\(n=2m\) it consists of \(m\) nonnested ovals.
+For a compact segment of such profiles, a common small parameter
+gives a path of nonsingular curves. Polar simplicity need not hold
+along this path.
+\end{proposition}
+
+\begin{proof}
+The rescaled path \eqref{eq:realmodel} consists of nonsingular
+forms down to \(u=0\), after shrinking the parameter interval.
+For \(u>0\), the real coordinate transformation
+\([X:Y:Z]\mapsto[uX:uY:Z]\) is connected to the identity through
+invertible real transformations. This proves rigid isotopy to
+\eqref{eq:modelcurve}.
+
+The model misses \(O\), so projection to \([X:Y]\in\RP^1\)
+is defined. For odd \(n\), each direction has exactly one real
+value of \(Z\), up to projective scaling. The projection is a
+continuous bijection from a compact space to \(\RP^1\), hence a
+homeomorphism. A nonsingular odd-degree curve has nontrivial
+mod-two projective homology. Its sole real component is therefore
+a pseudoline.
+
+For even \(n=2m\), the sign of \(P\) is well-defined on directions
+after choosing unit representatives. The function
+\(-P/(\sigma c)\) is positive on \(m\) alternate intervals bounded
+by consecutive roots in \(\RP^1\). On one such closed interval
+\(I\), choose a continuous unit representative \(v(\theta)\) and put
+\[
+ f(\theta)=\left(-\frac{P(v(\theta))}{\sigma c}\right)^{1/n}.
+\]
+The branches \(Z=\pm f(\theta)\) meet at the endpoints and bound
+\begin{equation}\label{eq:disks}
+ D_I=\{[v(\theta):Z]:\theta\in I,\ |Z|\leq f(\theta)\}.
+\end{equation}
+The strip with its two endpoint fibers collapsed is a closed
+disk. Its projective map is injective: distinct interior
+directions remain distinct, and a fixed unit representative
+identifies no two values of \(Z\). Thus \(D_I\) is an embedded
+disk, missing \(O\). The intervals \(I\) are disjoint, including
+their endpoints, and so are the disks. Their boundaries give
+precisely \(m\) nonnested ovals.
+
+Finally, let \(V_s\), \(s\in[0,1]\), be a segment with
+\(V_s(O)=c\). The rescaled forms converge in coefficient space
+to \eqref{eq:modelcurve} uniformly in \(s\). Openness of the
+nonsingular locus gives a common bound on \(u\).
+Hence one small nonzero real \(\mu\) of sign \(\sigma\) makes
+the entire segment nonsingular. No simplicity of \(V_{s,zz}\)
+is used for this step.
+\end{proof}
+
+Choose one profile from Section~\ref{sec:construction} for each
+desired total, and join them by finitely many profile segments.
+Taking the minimum of their smoothness thresholds and the
+endpoint flex thresholds gives a single positive \(\mu\)
+realizing all totals and all connecting paths. This completes
+Theorem~\ref{thm:construction}. The same finite-choice argument
+places representatives of all fourteen vectors in
+Proposition~\ref{prop:quarticvectors} in one rigid-isotopy class
+at a common sufficiently small positive parameter.
+
+In odd degree the transformation \([X:Y:Z]\mapsto[X:Y:-Z]\)
+also connects the two model signs. It belongs to the identity
+component of \(\mathrm{PGL}_3(\R)\): multiply its matrix by
+\(-1\) and rotate the \(X,Y\)-plane through \(\pi\).
+Positive rescaling of \(Z\) adjusts the magnitude of \(c\).
+For fixed \(P\), all sufficiently small odd-degree profiles
+with \(V(O)\ne0\), of either parameter sign, consequently lie
+in the same rigid-isotopy class. Their antipodal lifts to \(S^2\)
+are single embedded circles with two complementary domains.
+This topological statement does not assert that nonharmonic
+profiles are spherical harmonics.
+
+\begin{corollary}[Flexes on each oval]\label{cor:ovalcount}
+Assume the hypotheses of Theorem~\ref{thm:polar}, with \(n\)
+even, and fix the parameter sign \(\sigma\). For sufficiently
+small \(\mu\) of this sign, label each oval by the interval
+\(I_{ij}\) between consecutive directions \(i,j\) on which
+\(-P/(\sigma c)>0\). The oval has exactly
+\[
+                              N_{ij}=r_i+r_j
+\]
+real flexes. In particular \(N_{ij}\) is even and at most
+\(2(n-2)\). If the total is \(n(n-2)\), every oval has
+\(2(n-2)\) real flexes.
+\end{corollary}
+
+\begin{proof}
+Write \(\mu=\sigma u^n\), \(u>0\). The rescaled curves
+\eqref{eq:realmodel} converge smoothly to
+\eqref{eq:modelcurve}, whose ovals have disjoint tubular
+neighborhoods. The implicit function theorem and compactness
+identify, for all small \(u\), the perturbed real locus
+in each neighborhood with a unique normal graph over its
+model oval, with no additional real components.
+
+Let a continued flex tend to \(a\in L_i(\R)\setminus\{O\}\).
+Choose bounded local homogeneous representatives
+\([x(\mu):y(\mu):z(\mu)]\) with a nonzero limiting
+\((x,y)\)-pair in direction \(v_i\). In the rescaled coordinates,
+\[
+ [x(\sigma u^n):y(\sigma u^n):u z(\sigma u^n)]
+                      \longrightarrow [v_i:0].
+\]
+This endpoint belongs to precisely one model oval, namely that
+of the unique admissible interval adjacent to direction \(i\).
+Consequently all \(r_i\) continued flexes lie on that oval,
+including those whose unscaled limit is at infinity.
+Its other endpoint contributes \(r_j\). Exhaustion in
+Theorem~\ref{thm:polar} gives the formula. Finally,
+\(0\leq r_i\leq n-2\) and \(r_i\) is even; at the maximal
+total every \(r_i\) equals \(n-2\).
+\end{proof}
+
+For \(n=4\), maximal curves in this transverse family therefore have
+inflection type \((4,4)\). The global classification of maximally
+inflected quartics also includes \((6,2)\) and \((8,0)\)
+\citep[Proposition~7.1]{brugallelopez}; the marked line vectors in
+Proposition~\ref{prop:quarticvectors} classify a different object.
+
+Reversing the parameter sign changes the pairing of consecutive
+directions. It preserves the total but can change the counts
+assigned to the resulting ovals. No constancy of these counts
+along arbitrary rigid isotopies is asserted.
+
+\section{Radial profiles and the Stern family}\label{sec:radial}
+
+\subsection{The radial criterion in both parities}
+
+Let \(m=\lfloor n/2\rfloor\), and write
+\begin{equation}\label{eq:radial}
+ Q(q)=\sum_{k=0}^m c_kq^k,\qquad
+ V_Q=\sum_{k=0}^m c_k(x^2+y^2)^kz^{n-2k}.
+\end{equation}
+Its second polar is encoded in the affine chart \(z=1\) by
+\begin{equation}\label{eq:D}
+\begin{split}
+ D_n(q)&=4q^2Q''+(6-4n)qQ'+n(n-1)Q\\
+       &=\sum_{k=0}^{m-1}(n-2k)(n-2k-1)c_kq^k.
+\end{split}
+\end{equation}
+In particular \(S(x,y,1)=D_n(x^2+y^2)\).
+The coefficient \(c_m\) disappears in both parities.
+
+\begin{corollary}\label{cor:radial}
+Assume \(c_0c_{m-1}\ne0\) and every positive root of \(D_n\)
+is simple. If \(r\) is the number of positive roots, then for
+every sufficiently small nonzero real \(\mu\), the curve
+\(P+\mu V_Q=0\) is nonsingular and has exactly
+\[
+ \begin{cases}
+ n(2r+1),&n=2m+1,\\
+ 2nr,&n=2m
+ \end{cases}
+\]
+ordinary real flexes. The finite limiting points have squared
+radii equal to the positive roots of \(D_n\). In odd degree
+there is also one flex tending to infinity on each line; in
+even degree there are no such limiting flexes.
+\end{corollary}
+
+\begin{proof}
+On each line, the affine polar has two simple roots for each
+positive root of \(D_n\). In odd degree its homogenization has
+a simple factor \(z\) at infinity, with nonzero residual
+coefficient \(6c_{m-1}\). In even degree the value at a real
+infinite direction is \(2c_{m-1}(x^2+y^2)^{m-1}\ne0\).
+Theorem~\ref{thm:polar} applies.
+\end{proof}
+
+This gives all radial totals in Table~\ref{tab:counts}. More
+generally, given \(D_n=\sum_{k=0}^{m-1}d_kq^k\) with
+\(d_0d_{m-1}\ne0\), choose
+\begin{equation}\label{eq:radialinverse}
+ c_k=\frac{d_k}{(n-2k)(n-2k-1)}\quad(k<m),\qquad
+ c_m\ \text{arbitrary}.
+\end{equation}
+Choosing \(r\) distinct positive and \(m-1-r\) distinct negative
+roots realizes any \(r=0,\ldots,m-1\), and prescribes the
+limiting squared radii. Repeated negative or nonreal roots are
+allowed. Common roots of \(Q\) and \(D_n\) are also allowed when
+the positive roots of \(D_n\) remain simple.
+
+For odd degree the real locus is a pseudoline by
+Proposition~\ref{prop:topology}, now without any equal-spacing
+assumption. For even degree, Corollary~\ref{cor:ovalcount}
+gives \(4r\) flexes on each oval, since every line contributes
+\(2r\). The fixed-\(P\) isotopy statement of
+Proposition~\ref{prop:topology} applies to both radial and
+nonradial profiles.
+
+\subsection{Equal spacing, exact locations and triple roots}
+
+For odd \(n=2m+1\), put \(W_n=\im(x+iy)^n\).
+For the affine equation \(W_n+\mu Q(x^2+y^2)=0\), let
+\[
+ T(q)=4\{2q(Q')^3+n(n-3)Q(Q')^2-n^2Q^2Q''\},\qquad
+ L_\mu(q)=n^2q^{n-2}D_n(q)+\mu^2T(q).
+\]
+At real curve points away from the origin, the tangent-Hessian
+numerator is
+\begin{equation}\label{eq:sectoralK}
+                          N=\mu L_\mu(q).
+\end{equation}
+Here \(N=f_y^2f_{xx}-2f_xf_yf_{xy}+f_x^2f_{yy}\), with
+\(f=W_n+\mu Q(x^2+y^2)\), is the affine Hessian evaluated
+on the tangent vector \((-f_y,f_x)\).
+To check the formula, write \(W_n=\rho^np(\theta)\),
+use \(p''=-n^2p\), \((p')^2=n^2(1-p^2)\), and substitute
+\(\rho^np=-\mu Q\) in the tangent quadratic form of the
+affine Hessian. For example, with \(A=2qQ'-nQ\), the cubic
+coefficient simplifies by
+\[
+             A^3+n^2QA^2-n^2Q^2D_n=q^2T.
+\]
+The curve equation is feasible exactly when
+\(\Delta_\mu(q)=q^n-\mu^2Q(q)^2\geq0\).
+Near a simple positive root \(\alpha\) of \(D_n\), this
+inequality is strict for small \(\mu\). Its \(2n\) flexes
+have the common squared radius
+\begin{equation}\label{eq:radialdrift}
+ q_\alpha(\mu^2)=\alpha-
+   \frac{T(\alpha)}{n^2\alpha^{n-2}D_n'(\alpha)}\mu^2+O(\mu^4),
+\end{equation}
+determined by \(L_\mu=0\). Their angles satisfy
+\(\sin(n\theta)=-\mu Q(q_\alpha)/q_\alpha^{n/2}\).
+Local uniqueness accounts for all \(2n\) points.
+
+The \(n\) remaining flexes in this odd sectoral family lie
+exactly at infinity. After rotating any limiting direction to
+\([1:0:0]\), the polynomial \(W_n(1,y)\) is odd in \(y\).
+The radial perturbation is even in \(y\) and odd in \(z\).
+The implicit graph \(y=h(z,\mu)\) is therefore odd in \(z\),
+so \(h''(0,\mu)=0\); ordinary contact follows from
+Corollary~\ref{cor:radial}. Section~\ref{sec:asymmetric}
+shows why these exact locations do not survive general
+line configurations.
+
+There is a simple exact-location observation that does not
+require equal spacing. Suppose \(Q\) has a root of multiplicity
+exactly three at \(\alpha>0\). At each of the \(2n\) intersections
+of \(P=0\) with \(x^2+y^2=\alpha\), \(Q=Q'=Q''=0\).
+The curve is regular there because its transverse derivative
+equals that of \(P\). Its tangent is the corresponding
+limiting line, whose restriction of the equation is
+\(\mu Q(x^2)\) in an orthonormal line coordinate. For
+\(\mu\ne0\), the contact order is exactly three. These points
+are fixed ordinary flexes, rather than hyperflexes. Consistently,
+\(D_n(\alpha)=0\) and
+\(D_n'(\alpha)=4\alpha^2Q'''(\alpha)\ne0\).
+
+The following degree-seven profiles illustrate the permitted
+degeneracies and the distinction between roots of \(Q\) and \(D_7\):
+\begingroup
+\renewcommand{\arraystretch}{1.35}
+\[
+\begin{array}{c|c|c}
+ Q(q)&D_7(q)&N_{\R}\\ \hline
+ \frac1{42}+\frac q{10}+\frac{q^2}{6}&(q+1)^2&7\\
+ 1-7q^2+q^3&42(1-q^2)&21\\
+ (q-1)^3&-6(q-1)(3q-7)&35
+\end{array}
+\]
+\endgroup
+The first has vanishing top radial coefficient and a double
+negative root of \(D_7\). In the last, \(q=1\) is a fixed
+circle of fourteen ordinary flexes for \(W_7\); the other
+positive root of \(D_7\) is \(7/3\).
+
+\subsection{Harmonic specialization}
+
+Let \(L_n\) be the Legendre polynomial normalized by \(L_n(1)=1\),
+write \(R^2=x^2+y^2+z^2\), and put
+\[
+ Z_n=R^nL_n(z/R).
+\]
+This expression is a homogeneous polynomial. For odd \(n=2m+1\),
+the classical sectoral and zonal harmonics give the Stern family
+\begin{equation}\label{eq:stern}
+                         W_n+\mu Z_n=0;
+\end{equation}
+see B\'erard--Helffer \citep{berardhelffer}.
+The lowering identity
+\begin{equation}\label{eq:lowering}
+                  (Z_n)_{zz}=n(n-1)Z_{n-2}
+\end{equation}
+can be checked without importing a new geometric assertion.
+The generating function
+\[
+ \sum_{k\geq0}Z_kt^k
+  =\bigl(1-2zt+(x^2+y^2+z^2)t^2\bigr)^{-1/2}
+\]
+satisfies
+\(\partial_z\sum Z_kt^k=t\sum Z_kt^k+
+t^2\partial_t\sum Z_kt^k\).
+Comparing coefficients gives \(\partial_zZ_k=kZ_{k-1}\);
+applying it twice proves \eqref{eq:lowering}.
+
+In the chart \(z=1\),
+\[
+ Q_n(q)=(1+q)^{n/2}L_n((1+q)^{-1/2}),\qquad
+ D_n(q)=n(n-1)Q_{n-2}(q).
+\]
+Equivalently, the explicit radial coefficients are
+\[
+ Q_n(q)=\sum_{k=0}^{m}
+       \frac{(-1)^k n!}{4^k(k!)^2(n-2k)!}\,q^k.
+\]
+The odd Legendre polynomial \(L_{n-2}\) has \(m-1\) positive
+simple roots \(\tau_j\in(0,1)\); its remaining central root is
+zero. Hence \(Q_{n-2}\) has exactly \(m-1\) positive simple
+roots \(\tau_j^{-2}-1\), and its leading coefficient is
+nonzero. Also \(Q_n(0)=1\). Corollary~\ref{cor:radial} gives
+exactly \(n(n-2)\) ordinary real flexes for all sufficiently
+small nonzero real \(\mu\). The finite limiting squared radii
+are \(\tau_j^{-2}-1\).
+
+For clarity, the elementary Legendre root property used here
+follows from orthogonality on \([-1,1]\): if a degree-\(k\)
+Legendre polynomial had fewer than \(k\) sign-changing roots
+in \((-1,1)\), multiplication by the product of their linear
+factors would give a polynomial of degree less than \(k\)
+with a nonzero integral against it, contradicting orthogonality.
+Thus all \(k\) roots are simple and internal; parity supplies
+the positive-root count.
+
+All these real flexes lie on the sole pseudoline, and its
+spherical lift has two complementary domains. The nodal
+construction of the harmonic family is classical
+\citep[Proposition~1(i), preprint version]{berardhelffer};
+the present specialization concerns the exhaustive flex
+calculation. Maximal existence and concentration on a
+pseudoline are not asserted as new.
+
+\section{Examples and the limits of the criterion}
+
+\subsection{A nonradial quartic with six real flexes}
+
+Take
+\begin{equation}\label{eq:quartic}
+ P=y(x-y)(x-2y)(x-3y),\qquad
+ V=\frac{z^4}{12}+\frac{(-x^2+2y^2)z^2}{2}.
+\end{equation}
+Then \(S=z^2-x^2+2y^2\) has respectively \(2,0,2,2\)
+real projective zeros on the four lines. Theorem~\ref{thm:polar}
+therefore gives six ordinary real flexes at sufficiently
+small nonzero parameter. This total is unavailable to
+the transverse degree-four radial profiles of
+Corollary~\ref{cor:radial}, which give zero or eight.
+
+The fixed value \(\mu=1/1000\) is also certified directly.
+Multiplying \(F_\mu\) by \(12000\) gives
+\[
+ F=12000y(x-y)(x-2y)(x-3y)+z^4-6x^2z^2+12y^2z^2.
+\]
+Let \(f=F(x,y,1)\) and let \(h\) be the dehomogenized
+primitive ternary Hessian. Elimination in \(y\) gives a
+squarefree polynomial \(E(x)\) of degree \(24\). The
+penultimate subresultant is linear in \(y\), with coefficient
+coprime to \(E\); the leading coefficient of \(f\) in \(y\)
+is the nonzero constant \(-72000\). Sturm's method gives
+exactly six real roots of \(E\), hence six real affine
+intersection points. There are \(24\) distinct complex
+affine intersections, the full B\'ezout degree, so all are
+simple. Separate exact checks show that the curve is
+nonsingular and that none of its four points at infinity
+is a flex. The accompanying script
+\texttt{examples/check\_quartic.py} reconstructs these
+polynomials and checks, using rational arithmetic.
+This fixed-parameter certificate is distinct from the
+small-parameter theorem.
+
+\subsection{An asymmetric quintic and moving locations}\label{sec:asymmetric}
+
+Let
+\[
+                   P=y(x-y)(x-2y)(x-3y)(x-4y).
+\]
+Near \(y=0\), write \(P=d x^4y+e x^3y^2+O(y^3)\);
+here \(d=1\), \(e=-10\). For \(Q=1-q\), the polynomial
+\(D_5=20-6q\) has positive root \(\alpha=10/3\).
+The radial corollary gives fifteen flexes. The local graph
+\(y=\mu h_1(x)+\mu^2h_2(x)+O(\mu^3)\) has
+\[
+ h_1=-\frac{1-x^2}{d x^4},\qquad
+ h_2=-\frac{e(1-x^2)^2}{d^3x^9}.
+\]
+At \(x_0=\pm\sqrt{10/3}\),
+\[
+ h_1'''(x_0)=\frac{12}{d}x_0^{-5},\qquad
+ h_2''(x_0)=-\frac{50e}{d^3}x_0^{-11}.
+\]
+Solving \(h_{xx}=0\) gives
+\(x_{\rm fl}=x_0+25e\,x_0^{-6}\mu/(6d^2)+O(\mu^2)\).
+Consequently the squared radii of the two flexes near this line are
+\begin{equation}\label{eq:split}
+ q_+(\mu)=\frac{10}{3}-\frac{3\sqrt{30}}4\mu+O(\mu^2),
+ \qquad
+ q_-(\mu)=\frac{10}{3}+\frac{3\sqrt{30}}4\mu+O(\mu^2).
+\end{equation}
+They have a common limiting radius but distinct radii for
+small nonzero parameter.
+
+For the same \(P\), take \(Q=1+q+q^2\). Now \(D_5=20+6q\),
+so the five real flexes all tend to infinity. In the chart
+\(x=1\) at \([1:0:0]\), write \(y=h(z,\mu)\).
+Implicit differentiation gives
+\[
+                  h_{zz}(0,\mu)=20\mu^2,\qquad
+                  z_{\rm fl}(\mu)=\frac{10}{3}\mu+O(\mu^2).
+\]
+This flex therefore leaves \(z=0\).
+Both effects follow by substitution and differentiation;
+no count is inferred from a numerical plot.
+
+Intermediate quintic totals also have short formulas.
+For this \(P\), the polars
+\[
+                 S=z(z^2-x^2+\lambda y^2)
+\]
+with \(\lambda=2,5,10,17\) have respectively \(13,11,9,7\)
+simple real zeros on the line configuration. Integrating
+twice in \(z\) and applying Theorem~\ref{thm:polar} realizes
+these totals. These are statements at sufficiently small
+parameter, not additional fixed-parameter certificates.
+
+\subsection{The same polar with six or eight real flexes}\label{sec:samepolar}
+
+The polar alone need not determine the real count when a restricted
+root is multiple. Consider
+\begin{equation}\label{eq:samepolar}
+ P=y(x-y)(x-2y)(x-3y),\qquad
+ V_b=\frac{z^4}{12}+\frac{(y^2-x^2)z^2}{2}+bx^4.
+\end{equation}
+For every \(b\), we have \(V_b(O)=1/12\) and
+\[
+                         V_{b,zz}=z^2-x^2+y^2.
+\]
+This polar has two simple real zeros on each of
+\(y=0,x=2y,x=3y\), and a double zero at \(a=[1:1:0]\)
+on \(x=y\). We show that for sufficiently small \(\mu>0\),
+the choice \(b=1\) gives six ordinary real flexes and
+\(b=-1\) gives eight.
+
+In the chart \(x=1\), put \(p(y)=y(1-y)(1-2y)(1-3y)\).
+Since \(p'(1)=-2\), the local curve is \(y=h(z,\mu)\),
+where \(h\) is analytic and even in \(z\). Write
+\(h=1+\mu h_1+\mu^2h_2+O(\mu^3)\). Substitution gives
+\[
+ \begin{split}
+ h_1&=\frac b2+\frac{z^4}{24},\\
+ h_2&=-\frac{9b^2}{8}-\frac{3bz^4}{16}
+       +\frac{bz^2}{4}-\frac{z^8}{128}+\frac{z^6}{48}.
+ \end{split}
+\]
+The normalized flex equation is therefore
+\begin{equation}\label{eq:doubleunfold}
+ \frac{h_{zz}}{\mu}
+             =\frac{z^2}{2}+\frac{b\mu}{2}
+                       +O(\mu z^2+\mu^2).
+\end{equation}
+The quotient extends analytically to \(\mu=0\).
+By parity it is analytic in \(w=z^2\), with derivative
+in \(w\) close to \(1/2\). For \(b=1\) it is positive
+for real \(z\) in a fixed small neighborhood and small
+\(\mu>0\). For \(b=-1\) it has exactly one nearby
+zero in \(w\), namely \(w=\mu+O(\mu^2)>0\), yielding
+two real zeros
+\(z=\pm\sqrt{\mu}+O(\mu^{3/2})\).
+They are simple zeros of \(h_{zz}\), hence ordinary flexes.
+
+The six simple polar zeros continue as ordinary real flexes.
+The nonsingularity lemma and the central exclusion estimate
+do not require polar simplicity. Together with projective
+compactness and the above local calculation, they exclude
+all further real flexes for these fixed profiles.
+
+At \(b=0\), \(a\) is a fixed smooth point with tangent
+\(y=x\). Restricting the equation to that tangent gives
+\(\mu z^4/12\), so the contact order is exactly four.
+Locally \(h-1\) is divisible by \(z^4\), and
+\(h_{zz}/(\mu z^2)\) extends to a nonzero analytic
+function with value \(1/2\) at \((0,0)\).
+Thus there are six ordinary real flexes and this one
+hyperflex: seven distinct points, with total real Hessian
+intersection multiplicity eight.
+
+There are also exact certificates at \(\mu=1/1000\).
+For \(b=1,-1\), respectively, the integer forms
+\[
+ 12000P+z^4+6(y^2-x^2)z^2+12bx^4
+\]
+have six and eight ordinary real flexes. The accompanying
+\texttt{examples/check\_extensions.py} verifies complex
+nonsingularity, no flex at infinity, a squarefree elimination
+polynomial of degree \(24\), coprimality of the linear
+subresultant coefficient, and the real-root count by Sturm's
+theorem. These conditions identify all \(24\) distinct
+complex curve--Hessian intersections and certify ordinarity.
+The exact output is \texttt{EXTENSION\_CHECKS.json}.
+
+The segment \(b\in[-1,1]\) has fixed central value, so
+Proposition~\ref{prop:topology} joins these profiles in one
+rigid-isotopy class at a common sufficiently small parameter.
+The two certificates at \(1/1000\) do not certify the whole
+segment at that value. The change through an order-four
+contact is classical \citep[Section~3.1]{arroyoetal}; here
+the example keeps the second polar fixed and exhibits the
+effect of a coefficient lost under two differentiations.
+
+\subsection{Colliding directions and tropical comparison}
+
+The example above concerns a multiple restricted polar root.
+It is distinct from a triple root of \(Q\) in Section~5.2,
+where the relevant root of \(D_n\) may still be simple.
+
+Uniformity holds on the compact profile segments in
+Proposition~\ref{prop:topology}. It is not asserted for
+unbounded coefficient families or colliding line directions.
+If two directions merge, the rescaled model can become singular
+and the strict binary-Hessian bound can degenerate. The theorem
+therefore supplies no positive common threshold or assertion
+about persistence of distinct flexes through that limit.
+
+For the natural radial degeneration \(\mu=t\), after a generic
+rotation of \(x,y\), the degree-\(n\) edge coefficients have
+valuation zero and the nonzero lower radial coefficients have
+valuation one. The lower Newton hull has a coarse triangular
+cell of normalized area \(n^2\). It is not the unimodular
+subdivision assumed in the nonsingular tropical lifting
+statements of \citep[Theorems~5.6--5.7]{brugallelopez}.
+Those particular hypotheses do not apply directly to this
+presentation. This observation does not rule out other
+tropical presentations and is not evidence of novelty.
+Our real criterion and construction require no tropical
+lifting assertion.
+
+\appendix
+\section{The weighted complex specialization cycle}\label{app:cycle}
+
+For \(\mu\ne0\), let \(\Infl(C_\mu)\) be the intersection
+cycle of the nonsingular curve with its ternary Hessian,
+including multiplicities. With \(S=V_{zz}\) and \(c\ne0\),
+\begin{equation}\label{eq:cycle}
+ \lim_{\mu\to0}\Infl(C_\mu)
+                  =2n(n-2)[O]+(P\cdot S).
+\end{equation}
+Here \(P\cdot S\) denotes the projective intersection cycle,
+of degree \(n(n-2)\), supported away from \(O\). No
+ordinary-flex assumption on its nonreal points is made.
+
+We give a direct specialization argument. The forms \(P\)
+and \(K_0=B_PS\) have no common component: \(S(O)\ne0\)
+excludes any \(L_i\) from \(S\), and the restriction of \(B_P\)
+to a simple-root direction of \(P\) is nonzero.
+The family
+\[
+ \mathcal Z=\{F_\mu=K_\mu=0\}\subset\CP^2\times\Delta
+\]
+over a sufficiently small complex disk has finite special
+fiber. Properness and upper semicontinuity of fiber dimension
+make the projection finite after restricting \(\Delta\).
+At a point above \(\mu=0\), the three elements
+\(\mu,F_\mu,K_\mu\) form a system of parameters in the
+regular local ambient ring of dimension three. They are
+a regular sequence, also in the order \(F_\mu,K_\mu,\mu\).
+Thus the finite family has no \(\mu\)-torsion and is flat
+over the one-dimensional smooth base. Its special
+intersection cycle is the specialization of the generic one.
+
+On each \(L_i\), \(B_P\) is a nonzero constant times
+\(\rho^{2n-4}\), where \([\rho:z]\) are line coordinates
+and \(O=[0:1]\). It contributes \(2n-4\) at \(O\).
+Summing over the \(n\) lines gives \(2n(n-2)\); the
+remaining cycle is \(P\cdot S\), proving \eqref{eq:cycle}.
+The total degree is \(3n(n-2)\), as expected.
+By \eqref{eq:central}, the central cluster is entirely
+nonreal for small real nonzero parameter, with multiplicities
+understood.
+
+Formula \eqref{eq:cycle} is an application of existing
+specialization theory. On the flat family
+\(X=\{P+tV=0\}\), put \(H=\det\Hess(P+tV)=tK\).
+The divisor identity is
+\[
+                 \operatorname{div}(H)=X_0+\operatorname{div}(K).
+\]
+Since \(K_0\) contains no component of \(P=0\), Theorem~4.1
+of \citet{esteves} applies with \(E_i=0\), \(p_i=1\) and
+\(F_i=\operatorname{div}(K)\). Equivalently, Proposition~5.2
+of \citet{ems} applies with \(G=H\), \(L_i=1\), \(M_i=K\).
+The extra irreducibility assumption in
+\citep[Example~5.3]{esteves}, and the nondegenerate-system
+assumptions of the specialized ramification formulas in
+\citep{ems}, do not obstruct these general applications.
+The complex cycle alone cannot distinguish real flexes
+approaching \(O\) from conjugate pairs. That distinction
+is supplied by the uniform real estimate in
+Section~2.
+
+\section*{AI assistance}
+AI assistants were used in developing proof arguments, checking symbolic
+calculations, searching the literature, and drafting and revising the
+exposition. The exact computations for the examples can be reproduced
+from the accompanying scripts. This assistance does not constitute
+independent human review.
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,28 @@
+{
+  "scope": "One exact quartic, mu=1/1000; distinct ordinary projective real flexes",
+  "F": "12000*x**3*y - 72000*x**2*y**2 - 6*x**2*z**2 + 132000*x*y**3 - 72000*y**4 + 12*y**2*z**2 + z**4",
+  "mu": "1/1000",
+  "eliminant": "-1632960000000000000000000000000000*x**24 + 5365440000000000000000000000000000*x**22 - 2477946087000000000000000000000000*x**20 - 5494804934578560000000000000000000*x**18 + 4140951674176278686250000000000000*x**16 + 110434425330296530710000000000000*x**14 - 16201677512006481621240000000000*x**12 - 199059352723497865887360000000*x**10 + 25615699705280393862471000000*x**8 + 119768759747372104637040000*x**6 - 17241106145217151472334000*x**4 - 41430516465272256570960*x**2 + 4935262585127500998241",
+  "eliminant_degree": 24,
+  "real_affine_count": 6,
+  "real_infinity_count": 0,
+  "linear_subresultant_degree": 1,
+  "checks": {
+    "leading_coefficient_of_f_in_y_nonzero_constant": true,
+    "penultimate_subresultant_is_linear": true,
+    "eliminant_squarefree": true,
+    "linear_denominator_coprime_to_eliminant": true,
+    "six_real_affine_flexes": true,
+    "no_inflections_at_infinity": true,
+    "affine_complex_smoothness": true,
+    "infinity_smoothness": true,
+    "intersection_degree_is_24": true
+  },
+  "passed": 9,
+  "total": 9,
+  "elapsed_seconds": 0.26898260000234586,
+  "sympy": "1.14.0",
+  "script_sha256": "2f9204e408bb2a39e79db4fb4e8999fa8c149617f255acd29472b96e5c8d7c53",
+  "explanation": "Squarefree eliminant and coprime linear subresultant give 24 simple complex affine intersections and six real ones. There are no infinity flexes. Smoothness is checked separately.",
+  "general_degree_statement": false
+}

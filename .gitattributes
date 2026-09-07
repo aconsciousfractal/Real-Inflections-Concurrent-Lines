@@ -1,0 +1,2 @@
+* text=auto eol=lf -filter
+*.pdf -text -filter -merge -diff

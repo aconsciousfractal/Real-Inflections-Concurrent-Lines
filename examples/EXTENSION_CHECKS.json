@@ -1,0 +1,60 @@
+{
+  "scope": "Exact identities and two quartics at a fixed parameter; not a proof for arbitrary degree or parameter",
+  "symbolic_checks": {
+    "first_graph_coefficient": true,
+    "normalized_flex_leading": true,
+    "double_root_unfolding_coefficient": true,
+    "kernel_same_second_polar": true,
+    "quartic_discriminant_identity": true
+  },
+  "h1": "b/2 + z**4/24",
+  "h2": "-9*b**2/8 - 3*b*z**4/16 + b*z**2/4 - z**8/128 + z**6/48",
+  "cases": [
+    {
+      "b": 1,
+      "mu": "1/1000",
+      "expected": 6,
+      "real_affine_count": 6,
+      "checks": {
+        "quartic_leading_coefficient": true,
+        "eliminant_degree_24": true,
+        "eliminant_squarefree": true,
+        "linear_subresultant": true,
+        "linear_denominator_coprime": true,
+        "affine_complex_smoothness": true,
+        "no_curve_point_x0_at_infinity": true,
+        "infinity_complex_smoothness": true,
+        "no_flex_at_infinity": true,
+        "expected_real_count": true
+      },
+      "passed": 10,
+      "total": 10,
+      "eliminant": "-61380323844000696067440623616000000*x**24 - 61290807141865606090259890176000000000*x**22 + 212361722218488018208309744183934976000*x**20 - 240476196791968249667546672644239360000*x**18 + 85952228294908060255266687670534742016*x**16 + 3896404317473864618591153146482352128*x**14 - 390987495611249226168133968622329600*x**12 - 8103198403095014932499962873998720*x**10 + 700673315167100810790019224905616*x**8 + 4151929696279545185577907371072*x**6 - 472195817416044267896698173864*x**4 - 994749040188996670969653528*x**2 + 125744069758747423204291009",
+      "elapsed_seconds": 0.20646960000158288
+    },
+    {
+      "b": -1,
+      "mu": "1/1000",
+      "expected": 8,
+      "real_affine_count": 8,
+      "checks": {
+        "quartic_leading_coefficient": true,
+        "eliminant_degree_24": true,
+        "eliminant_squarefree": true,
+        "linear_subresultant": true,
+        "linear_denominator_coprime": true,
+        "affine_complex_smoothness": true,
+        "no_curve_point_x0_at_infinity": true,
+        "infinity_complex_smoothness": true,
+        "no_flex_at_infinity": true,
+        "expected_real_count": true
+      },
+      "passed": 10,
+      "total": 10,
+      "eliminant": "81977964427802762496426000384000000*x**24 - 82097510644834265212453453824000000000*x**22 + 283677218264339000367307589277057024000*x**20 - 321981561763929865286266596115599360000*x**18 + 116778466443811003452736230328779350016*x**16 + 3927390403514767835258251022944591872*x**14 - 401614869551648556601001940229967616*x**12 - 6323451148809974725116338680967808*x**10 + 611803048409152755228189927544464*x**8 + 4053633617386133144737500870720*x**6 - 423276074144163255302829839160*x**4 - 1053674667033307065896810472*x**2 + 125744069758747423204291009",
+      "elapsed_seconds": 0.132448000000295
+    }
+  ],
+  "sympy": "1.14.0",
+  "script_sha256": "33da1ef52c0ea62fa25ef89778cf70b860677728f96211794f5ef3970f04571c"
+}

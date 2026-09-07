@@ -1,0 +1,37 @@
+{
+  "python": "3.14.6",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational and symbolic",
+  "commands": [
+    "python -X utf8 examples/check_quartic.py",
+    "python -X utf8 examples/check_extensions.py"
+  ],
+  "fresh_runs": 2,
+  "checks": {
+    "first_quartic": 9,
+    "symbolic_identities": 5,
+    "same_polar_b1": 10,
+    "same_polar_bminus1": 10
+  },
+  "all_passed": true,
+  "fixed_parameter": "1/1000",
+  "real_flex_counts": [
+    6,
+    6,
+    8
+  ],
+  "scope": "Finite examples and symbolic identities; the all-degree and sufficiently-small-parameter assertions are proved in the article.",
+  "files": {
+    "examples/check_quartic.py": "2f9204e408bb2a39e79db4fb4e8999fa8c149617f255acd29472b96e5c8d7c53",
+    "examples/check_extensions.py": "33da1ef52c0ea62fa25ef89778cf70b860677728f96211794f5ef3970f04571c",
+    "examples/QUARTIC_CHECK.json": "e847f144111d3f37a7ccd683d25bea50da8714628c3a02f9867b00ac47eae916",
+    "examples/EXTENSION_CHECKS.json": "503a98ed0153d28ed13da5b5849486e6c82617a9d01d04e73b3e91ff65c3eb4d"
+  },
+  "verified_date": "2026-09-07",
+  "environment": {
+    "python": "3.14.6",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "platform": "Windows"
+  }
+}

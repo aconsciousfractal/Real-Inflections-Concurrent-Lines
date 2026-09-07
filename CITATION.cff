@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript. Companion code and documentation are MIT; manuscript rights are described in LICENSE_SCOPE.md."
+title: "Real inflection points of perturbations of concurrent lines"
+type: software
+version: "1.0.0"
+authors:
+  - family-names: Babanskyy
+    given-names: Oleksiy
+    orcid: "https://orcid.org/0009-0001-6176-6208"
+license: MIT
+keywords:
+  - real-algebraic-curves
+  - inflection-points
+  - Hessian
+  - rigid-isotopy
+  - exact-arithmetic
+preferred-citation:
+  type: article
+  title: "Real inflection points of perturbations of concurrent lines"
+  authors:
+    - family-names: Babanskyy
+      given-names: Oleksiy
+      orcid: "https://orcid.org/0009-0001-6176-6208"
+  year: 2026

@@ -1,0 +1,4 @@
+paper/build/
+__pycache__/
+.venv/
+*.pyc
