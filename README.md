@@ -6,7 +6,7 @@ An explicit criterion for counting all real inflection points in small
 perturbations of a prescribed arrangement of distinct concurrent real
 lines, with constructions that control the topology of the resulting curve.
 
-Read the [paper](paper/output/pdf/real_inflections_concurrent_lines.pdf)
+Read the [paper](paper/real_inflections_concurrent_lines.pdf)
 or its [LaTeX source](paper/real_inflections_concurrent_lines.tex).
 
 ## Main results
@@ -39,6 +39,16 @@ use. The bibliography includes the model comparison with Breiding, Kohn
 and Sturmfels and the global quartic distributions of Brugalle and Lopez
 de Medrano.
 
+## Repository layout
+
+| Directory | Contents |
+| --- | --- |
+| `paper/` | The PDF, LaTeX source and bibliography, directly accessible. |
+| `examples/` | Exact verification programs and their recorded results. |
+| `scripts/` | The manuscript build helper. |
+
+Temporary TeX products are kept in the ignored root-level `build/` directory.
+
 ## Read and reproduce
 
 A short reading route is Theorems 1.1 and 1.2, Proposition 3.1, Corollary 4.2
@@ -66,11 +76,11 @@ Install a local TeX Live or MiKTeX distribution with pdflatex, bibtex,
 lmodern, amsmath, amssymb, amsthm, mathtools, geometry, booktabs, array,
 microtype, natbib, hyperref and the plainnat bibliography style. Then run:
 
-    python -X utf8 paper/build_manuscript.py
+    python -X utf8 scripts/build_manuscript.py
 
 The helper requests no package installation. The PDF is written to
-paper/output/pdf/; logs and a source/output digest receipt are in
-paper/build/. Python packages are needed only for the example checkers,
+`paper/real_inflections_concurrent_lines.pdf`; logs and a source/output
+digest receipt are in the ignored `build/manuscript/` directory. Python packages are needed only for the example checkers,
 not for the mathematical proofs or TeX itself.
 
 ## Scope
@@ -86,6 +96,12 @@ not the global classification of quartics.
 
 Citation metadata is in [CITATION.cff](CITATION.cff).
 Original companion code and repository documentation are under
-[MIT](LICENSE). Manuscript rights are retained by the author, as specified
-in [LICENSE_SCOPE.md](LICENSE_SCOPE.md). The paper discloses substantive AI
-assistance. Third-party publications are cited and are not redistributed.
+[MIT](LICENSE). The manuscript, its sources and bibliography, and the PDF
+are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+as specified in [LICENSE_SCOPE.md](LICENSE_SCOPE.md).
+The paper discloses substantial OpenAI Codex assistance in mathematics,
+code and writing. The author reports using the most capable GPT model
+available to him in Codex at the time; exact historical model-version
+identifiers are not documented. AI review and finite computations do not
+constitute independent specialist review or formal verification.
+Third-party publications are cited and are not redistributed.

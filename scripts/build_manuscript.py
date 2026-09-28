@@ -1,6 +1,6 @@
 """Build the article with a preinstalled TeX distribution.
 
-Generated files remain under build/ and output/.
+The PDF is written directly to paper/; temporary files stay in build/manuscript/.
 Run from any directory: python -X utf8 path/to/build_manuscript.py
 """
 from __future__ import annotations
@@ -14,9 +14,10 @@ import subprocess
 import time
 from datetime import datetime, timezone
 
-ROOT = Path(__file__).resolve().parent
-BUILD = ROOT / "build"
-OUTPUT = ROOT / "output" / "pdf"
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "paper"
+BUILD = ROOT / "build" / "manuscript"
+OUTPUT = SOURCE
 STEM = "real_inflections_concurrent_lines"
 
 
@@ -36,7 +37,7 @@ def main() -> int:
 
     # BibTeX resolves these local copies without platform-dependent BIBINPUTS.
     for filename in (STEM + ".tex", "references.bib"):
-        shutil.copyfile(ROOT / filename, BUILD / filename)
+        shutil.copyfile(SOURCE / filename, BUILD / filename)
     version = subprocess.run(
         [executables["pdflatex"], "--version"], capture_output=True, text=True,
         encoding="utf-8", errors="replace", timeout=20, check=True,
@@ -96,8 +97,8 @@ def main() -> int:
         "verdict": "BUILD_PASS_VISUAL_REVIEW_PENDING",
         "scope": "Typesetting only; no independent mathematical review.",
         "sources": {
-            filename: sha256(ROOT / filename)
-            for filename in (STEM + ".tex", "references.bib", "build_manuscript.py")
+            path.relative_to(ROOT).as_posix(): sha256(path)
+            for path in (SOURCE / (STEM + ".tex"), SOURCE / "references.bib", Path(__file__).resolve())
         },
         "output": target.relative_to(ROOT).as_posix(),
         "output_sha256": sha256(target),

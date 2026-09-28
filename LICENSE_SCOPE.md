@@ -1,17 +1,20 @@
 # License scope
 
-Copyright in the manuscript is retained by Oleksiy Babanskyy. The MIT
-LICENSE applies to the original companion software and repository
-documentation. It does not apply to the manuscript source, bibliography
-or compiled paper.
+Copyright (c) 2026 Oleksiy Babanskyy.
+
+The manuscript, its authored sources and bibliography, and its compiled PDF
+are licensed under Creative Commons Attribution 4.0 International
+([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
+The MIT [LICENSE](LICENSE) applies separately to the original companion
+software and repository documentation.
 
 | Material | Terms |
 | --- | --- |
-| examples/*.py, paper/build_manuscript.py | MIT |
+| examples/*.py, scripts/build_manuscript.py | MIT |
 | Root documentation, metadata, requirements and exact result records | MIT |
-| paper/real_inflections_concurrent_lines.tex, paper/references.bib | Manuscript copyright retained by the author |
-| paper/output/pdf/*.pdf | Manuscript copyright retained by the author |
+| paper/real_inflections_concurrent_lines.tex, paper/references.bib | CC BY 4.0 |
+| paper/*.pdf | CC BY 4.0 |
 
-No Creative Commons or other manuscript redistribution licence is asserted.
-Cited papers are referenced, not redistributed. Dependencies retain their
-own licences; see THIRD_PARTY_NOTICES.md.
+Cited third-party publications are referenced, not redistributed, and retain
+their own rights. Dependencies retain their own licences; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
